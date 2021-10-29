@@ -1,0 +1,21 @@
+from selenium import webdriver
+import time
+sites = ['https://valencia.com.ua/','https://valencia.com.ua/ielitnaya-bizhuteriya','https://valencia.com.ua/order','https://valencia.com.ua/password/reset',
+'https://valencia.com.ua/cvecha-l-objet-vetiver-d-orient.html','https://valencia.com.ua/page/return-and-exchange-swarovski.html',
+         'https://valencia.com.ua/precc-pap-e-el-casco-1715585053.html','https://valencia.com.ua/dvoinaya-rakushka-herend-queen-victoria.html',
+         'https://valencia.com.ua/ctol-1249213749.html','https://valencia.com.ua/search','https://valencia.com.ua/mezuza-ierucalim-dzhinc.html']
+
+driver = webdriver.Firefox()
+driver.set_window_position(1400,0)
+driver.maximize_window()
+for site in sites:
+    driver.get(site)
+    time.sleep(2)
+    name_of_site = site[site.rfind('/') + 1:]
+    driver.get_screenshot_as_file(name_of_site + '.png')
+    print(driver.title)
+
+driver.close()
+driver.quit()
+
+
