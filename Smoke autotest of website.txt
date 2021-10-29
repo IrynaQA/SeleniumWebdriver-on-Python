@@ -1,0 +1,123 @@
+url = 'https://arkos.ua/'
+driver = webdriver.Chrome()
+driver.get(url)
+driver.maximize_window()
+e_mail = 'qdf6t67@gmail.com'
+password = 'jRU#wewgvxhg5446p'
+
+# registration
+button_my_account = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//li[@class="account"]')))
+button_my_account.click()
+button_registration = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//a[@class="registr"]')))
+button_registration.click()
+field_email = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="register[email]"]')))
+field_email.click()
+field_email.send_keys(e_mail)
+field_passwd = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="register[password]"]')))
+field_passwd.click()
+field_passwd.send_keys(password)
+field_confirm_passwd = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="register[confirm_password]"]')))
+field_confirm_passwd.click()
+field_confirm_passwd.send_keys(password)
+field_last_name = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="register[lastname]"]')))
+field_last_name.click()
+field_last_name.send_keys('Ivan Ivanov')
+field_first_name = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@id="register_firstname"]')))
+field_first_name.click()
+field_first_name.send_keys('Ivan Ivanov')
+field_tel_number = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="register[telephone]"]')))
+field_tel_number.click()
+field_tel_number.send_keys('0963333333')
+button_continue = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//a[@id="simpleregister_button_confirm"]')))
+button_continue.click()
+button_continue_next = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//div[@class="right"]/a[@class="button"]')))
+button_continue_next.click()
+print('registration ok')
+
+# logout
+button_logo = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//img[@src="https://arkos.ua/image/logotype.svg"]')))
+button_logo.click()
+button_my_account = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//li[@class="account"]')))
+button_my_account.click()
+button_close_account = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//a[@class="logged_close"]')))
+button_close_account.click()
+print('logout ok')
+driver.close()
+
+driver = webdriver.Chrome()
+driver.get(url)
+driver.maximize_window()
+# login
+button_my_account = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//li[@class="account"]')))
+button_my_account.click()
+button_enter_login = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, '//a[@class="enter"]')))
+button_enter_login.click()
+login_field_email = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="email"]')))
+login_field_email.click()
+login_field_email.send_keys(e_mail)
+login_field_passwd = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="password"]')))
+login_field_passwd.click()
+login_field_passwd.send_keys(password)
+login_enter = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, '//input[@type="submit"]')))
+login_enter.click()
+print('login ok')
+
+button_logo = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//img[@src="https://arkos.ua/image/logotype.svg"]')))
+button_logo.click()
+category = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//*[@id="sample-menu-1"]/li[6]/a/b')))
+category.click()
+search_field = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@class="top-search2 ui-autocomplete-input"]')))
+search_field.click()
+search_field.send_keys('мишка')
+search_field.click()
+
+# search_field_click=WebDriverWait(driver,60).until(EC.presence_of_element_located((By.XPATH,'//*[@id="header"]/div')))
+# search_field_click()
+driver.get('https://arkos.ua/search/?search=%D0%BC%D0%B8%D1%88%D0%BA%D0%B0')
+item_bear_goods = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//*[@id="content"]/div[2]/div[1]/div[5]/div[4]/a')))
+item_bear_goods.click()
+item_bear_goods = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//div[@class="cartbutton"]')))
+item_bear_goods.click()
+menu_new_arrive = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//a[@href="/novye-postupleniya/?sort=p.date_available&order=DESC"]')))
+menu_new_arrive.click()
+item_towel_from_new_arrive = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//a[@onclick="pq_addToCart( 23944, $(this) )"]')))
+item_towel_from_new_arrive.click()
+buttom_cart_menu = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//div[@class="heading"]')))
+buttom_cart_menu.click()
+checkout_cart = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//*[@id="cart"]/div[2]/div[1]/a')))
+checkout_cart.click()
+field_number_of_item = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//input[@name="quantity[21770::]"]')))
+field_number_of_item.click()
+field_number_of_item.send_keys('5')
+field_number_of_item.submit()
+main_menu_method_pay = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//a[@href="https://arkos.ua/sposoby_oplaty.html"]')))
+main_menu_method_pay.click()
+print("test passed")
+driver.close()
