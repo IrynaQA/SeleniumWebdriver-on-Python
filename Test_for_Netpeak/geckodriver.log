@@ -1,0 +1,27 @@
+1638903665641	geckodriver	INFO	Listening on 127.0.0.1:11582
+1638903667667	webdriver::command	WARN	You are using deprecated legacy session negotiation patterns (desiredCapabilities/requiredCapabilities), see https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities#Legacy
+1638903667689	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\irabe\\AppData\\Local\\Temp\\rust_mozprofilegSqewH"
+1638903727468	geckodriver	INFO	Listening on 127.0.0.1:11822
+1638903729500	webdriver::command	WARN	You are using deprecated legacy session negotiation patterns (desiredCapabilities/requiredCapabilities), see https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities#Legacy
+1638903729513	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\irabe\\AppData\\Local\\Temp\\rust_mozprofilekFo7K5"
+1638903729866	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\irabe\\AppData\\Local\\Temp\\rust_mozprofilekFo7K5\\search.json.mozlz4", (void 0)))
+1638903731936	Marionette	INFO	Listening on port 11834
+1638903732182	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1638903805442	Marionette	INFO	Stopped listening on port 11834
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638903897742	geckodriver	INFO	Listening on 127.0.0.1:12592
+1638903899755	webdriver::command	WARN	You are using deprecated legacy session negotiation patterns (desiredCapabilities/requiredCapabilities), see https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities#Legacy
+1638903899768	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\irabe\\AppData\\Local\\Temp\\rust_mozprofileqBDEIt"
+1638903900137	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\irabe\\AppData\\Local\\Temp\\rust_mozprofileqBDEIt\\search.json.mozlz4", (void 0)))
+1638903902241	Marionette	INFO	Listening on port 12598
+1638903902438	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1638904146231	Marionette	INFO	Stopped listening on port 12598
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
